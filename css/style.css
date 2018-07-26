@@ -77,17 +77,17 @@ body {
     @media only screen and (max-width: 767px) {
       .animation-item--coral {
         animation-name: pick-a-box-animation-coral-mobile;
-        background-image: url("/library/PickABox/animation-pab-coral-mobile.png");
+        background-image: url("pab-annimation/library/PickABox/animation-pab-coral-mobile.png");
         background-size: 1800px 185px; } }
     @media only screen and (min-width: 768px) and (max-width: 1279px) {
       .animation-item--coral {
         animation-name: pick-a-box-animation-coral-tablet;
-        background-image: url("/library/PickABox/animation-pab-coral-tablet.png");
+        background-image: url("pab-annimation/library/PickABox/animation-pab-coral-tablet.png");
         background-size: 2385px 245px; } }
     @media only screen and (min-width: 970px) {
       .desktop .animation-item--coral {
         animation-name: pick-a-box-animation-coral-desktop;
-        background-image: url("/library/PickABox/animation-pab-coral-desktop.png");
+        background-image: url("pab-annimation/library/PickABox/animation-pab-coral-desktop.png");
         background-size: 2385px 245px; } }
   .animation-item--welcome {
     animation-delay: 0.2ms;
@@ -99,15 +99,15 @@ body {
     @media only screen and (max-width: 767px) {
       .animation-item--welcome {
         animation-name: pick-a-box-animation-welcome-mobile;
-        background-image: url("/library/PickABox/animation-pab-welcome-mobile.png");
+        background-image: url("pab-annimation/library/PickABox/animation-pab-welcome-mobile.png");
         background-size: 1296px 162px; } }
     @media only screen and (min-width: 768px) and (max-width: 1279px) {
       .animation-item--welcome {
         animation-name: pick-a-box-animation-welcome-tablet;
-        background-image: url("/library/PickABox/animation-pab-welcome-tablet.png");
+        background-image: url("pab-annimation/library/PickABox/animation-pab-welcome-tablet.png");
         background-size: 2040px 255px; } }
     @media only screen and (min-width: 970px) {
       .desktop .animation-item--welcome {
         animation-name: pick-a-box-animation-welcome-desktop;
-        background-image: url("/library/PickABox/animation-pab-welcome-desktop.png");
+        background-image: url("pab-annimation/library/PickABox/animation-pab-welcome-desktop.png");
         background-size: 2120px 265px; } }
