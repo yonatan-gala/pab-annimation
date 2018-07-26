@@ -1,9 +1,9 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sassLint = require('gulp-sass-lint');
-
+var gulp = require('gulp'),
+    connect = require('gulp-connect'),
+    sass = require('gulp-sass'),
+    sassLint = require('gulp-sass-lint');
 
 gulp.task('sass', function () {
     return gulp.src('./styles/**/*.scss')
@@ -24,3 +24,22 @@ gulp.task('sassLint', function () {
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError())
 });
+
+gulp.task('connect', function() {
+    connect.server({
+        root: './',
+        livereload: true
+    });
+});
+
+gulp.task('html', function () {
+    gulp.src('./')
+        .pipe(gulp.dest('./'))
+        .pipe(connect.reload());
+});
+
+gulp.task('watch', function () {
+    gulp.watch(['./*.html'], ['html']);
+});
+
+gulp.task('default', ['connect', 'watch']);

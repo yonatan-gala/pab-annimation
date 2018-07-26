@@ -1,0 +1,120 @@
+// PICK A BOX ANIMATION RELATED VARIABLES
+// ## SHOULD BE MERGE TO 'coral' ASSETS
+// coral popup image sprites
+$image-src-cms-pick-a-box-animation-coral-mobile: 'animation-pab-coral-mobile.png';
+$image-src-cms-pick-a-box-animation-coral-tablet: 'animation-pab-coral-tablet.png';
+$image-src-cms-pick-a-box-animation-coral-desktop: 'animation-pab-coral-desktop.png';
+// pick a box welcome popup image sprites
+$image-src-cms-pick-a-box-animation-welcome-mobile: 'animation-pab-welcome-mobile.png';
+$image-src-cms-pick-a-box-animation-welcome-tablet: 'animation-pab-welcome-tablet.png';
+$image-src-cms-pick-a-box-animation-welcome-desktop: 'animation-pab-welcome-desktop.png';
+
+// path + image name for the 'get-image' functions.
+// // coral popup image sprites
+$cms-pick-a-box-coral-animation-mobile: $image-cms-path + 'PickABox/' + $image-src-cms-pick-a-box-animation-coral-mobile;
+$cms-pick-a-box-coral-animation-tablet: $image-cms-path + 'PickABox/' + $image-src-cms-pick-a-box-animation-coral-tablet;
+$cms-pick-a-box-coral-animation-desktop: $image-cms-path + 'PickABox/' + $image-src-cms-pick-a-box-animation-coral-desktop;
+// // coral popup image sprites
+$cms-pick-a-box-welcome-animation-mobile: $image-cms-path + 'PickABox/' + $image-src-cms-pick-a-box-animation-welcome-mobile;
+$cms-pick-a-box-welcome-animation-tablet: $image-cms-path + 'PickABox/' + $image-src-cms-pick-a-box-animation-welcome-tablet;
+$cms-pick-a-box-welcome-animation-desktop: $image-cms-path + 'PickABox/' + $image-src-cms-pick-a-box-animation-welcome-desktop;
+
+// ## defined within pick a box.
+// todo: -- other animation containers should be defined.
+// # STYLE-GUIDE
+$sg-pick-a-box-popup-image-size: (
+        mobile: 16.2rem,
+        tablet: 26.5rem
+);
+
+// ## should be merged to 'coral' components variables within settings.
+//pick a box animation settings
+// - Coral (within coral popup)
+// --  properties from sprite images to help create calculated usable variables
+$pick-a-box-animation-coral-keyframe: 9;
+$pick-a-box-animation-coral-key-frame-width-mobile: 400px;
+$pick-a-box-animation-coral-key-frame-width-tablet: 530px;
+$pick-a-box-animation-coral-key-frame-width-desktop: 265px;
+$pick-a-box-animation-coral-sprite-height-mobile: 370px;
+$pick-a-box-animation-coral-sprite-height-tablet: 490px;
+$pick-a-box-animation-coral-sprite-height-desktop: 245px;
+// -- properties that are calculated
+// --- sprite total width
+$pick-a-box-animation-coral-sprite-width-mobile: ($pick-a-box-animation-coral-keyframe * $pick-a-box-animation-coral-key-frame-width-mobile);
+$pick-a-box-animation-coral-sprite-width-tablet: ($pick-a-box-animation-coral-keyframe * $pick-a-box-animation-coral-key-frame-width-tablet);
+$pick-a-box-animation-coral-sprite-width-desktop: ($pick-a-box-animation-coral-keyframe * $pick-a-box-animation-coral-key-frame-width-desktop);
+// calculated usable variables:
+// --- background sizes
+$pick-a-box-animation-coral-background-size-mobile: ($pick-a-box-animation-coral-sprite-width-mobile / 2) ($pick-a-box-animation-coral-sprite-height-mobile / 2);
+$pick-a-box-animation-coral-background-size-tablet: ($pick-a-box-animation-coral-sprite-width-tablet / 2) ($pick-a-box-animation-coral-sprite-height-tablet / 2);
+$pick-a-box-animation-coral-background-size-desktop: ($pick-a-box-animation-coral-sprite-width-desktop) ($pick-a-box-animation-coral-sprite-height-desktop);
+$pick-a-box-animation-coral-stop-background-position-mobile: ($pick-a-box-animation-coral-sprite-width-mobile - $pick-a-box-animation-coral-key-frame-width-mobile) / 2;
+$pick-a-box-animation-coral-stop-background-position-tablet: ($pick-a-box-animation-coral-sprite-width-tablet - $pick-a-box-animation-coral-key-frame-width-tablet) / 2;
+$pick-a-box-animation-coral-stop-background-position-desktop: ($pick-a-box-animation-coral-sprite-width-desktop - $pick-a-box-animation-coral-key-frame-width-desktop);
+// global control
+$pick-a-box-animation-coral-steps: ($pick-a-box-animation-coral-keyframe - 1);
+$pick-a-box-animation-coral-duration: 1.3s;
+// - Welcome (within 'pick a box popup'
+// --  properties from sprite images to help create calculated usable variables
+$pick-a-box-animation-welcome-keyframe: 8;
+$pick-a-box-animation-welcome-key-frame-width-mobile: 324px;
+$pick-a-box-animation-welcome-key-frame-width-tablet: 510px;
+$pick-a-box-animation-welcome-key-frame-width-desktop: 265px;
+$pick-a-box-animation-welcome-sprite-height-mobile: 324px;
+$pick-a-box-animation-welcome-sprite-height-tablet: 510px;
+$pick-a-box-animation-welcome-sprite-height-desktop: 265px;
+// -- properties that are calculated
+// --- sprite total width
+$pick-a-box-animation-welcome-sprite-width-mobile: ($pick-a-box-animation-welcome-keyframe * $pick-a-box-animation-welcome-key-frame-width-mobile);
+$pick-a-box-animation-welcome-sprite-width-tablet: ($pick-a-box-animation-welcome-keyframe * $pick-a-box-animation-welcome-key-frame-width-tablet);
+$pick-a-box-animation-welcome-sprite-width-desktop: ($pick-a-box-animation-welcome-keyframe * $pick-a-box-animation-welcome-key-frame-width-desktop);
+// calculated usable variables:
+// --- background sizes
+$pick-a-box-animation-welcome-background-size-mobile: ($pick-a-box-animation-welcome-sprite-width-mobile / 2) ($pick-a-box-animation-welcome-sprite-height-mobile / 2);
+$pick-a-box-animation-welcome-background-size-tablet: ($pick-a-box-animation-welcome-sprite-width-tablet / 2) ($pick-a-box-animation-welcome-sprite-height-tablet / 2);
+$pick-a-box-animation-welcome-background-size-desktop: ($pick-a-box-animation-welcome-sprite-width-desktop) ($pick-a-box-animation-welcome-sprite-height-desktop);
+$pick-a-box-animation-welcome-stop-background-position-mobile: ($pick-a-box-animation-welcome-sprite-width-mobile - $pick-a-box-animation-welcome-key-frame-width-mobile) / 2;
+$pick-a-box-animation-welcome-stop-background-position-tablet: ($pick-a-box-animation-welcome-sprite-width-tablet - $pick-a-box-animation-welcome-key-frame-width-tablet) / 2;
+$pick-a-box-animation-welcome-stop-background-position-desktop: ($pick-a-box-animation-welcome-sprite-width-desktop - $pick-a-box-animation-welcome-key-frame-width-desktop);
+// global control
+$pick-a-box-animation-welcome-steps: ($pick-a-box-animation-welcome-keyframe - 1);
+$pick-a-box-animation-welcome-duration: 1.3s;
+// common
+$pick-a-box-animation-delay: .2ms;
+
+// ## should be merged to 'coral' '_keyframes.scss'
+@keyframes pick-a-box-animation-coral-mobile {
+  100% {
+    background-position-x: -($pick-a-box-animation-coral-stop-background-position-mobile);
+  }
+}
+
+@keyframes pick-a-box-animation-coral-tablet {
+  100% {
+    background-position-x: -($pick-a-box-animation-coral-stop-background-position-tablet);
+  }
+}
+
+@keyframes pick-a-box-animation-coral-desktop {
+  100% {
+    background-position-x: -($pick-a-box-animation-coral-stop-background-position-desktop);
+  }
+}
+// ## should be merged to 'coral' '_keyframes.scss'
+@keyframes pick-a-box-animation-welcome-mobile {
+  100% {
+    background-position-x: -($pick-a-box-animation-welcome-stop-background-position-mobile);
+  }
+}
+
+@keyframes pick-a-box-animation-welcome-tablet {
+  100% {
+    background-position-x: -($pick-a-box-animation-welcome-stop-background-position-tablet);
+  }
+}
+
+@keyframes pick-a-box-animation-welcome-desktop {
+  100% {
+    background-position-x: -($pick-a-box-animation-welcome-stop-background-position-desktop);
+  }
+}

@@ -1,0 +1,86 @@
+// demonstration for Pick A BOX animation
+// 1. set element width and height
+// -  this is already applied within the pick a 'lci-pick-a-box-popup__main-img'
+// -  you need to apply it for the 'coral' popup as well.
+// 2. one the modifier level (use case level) apply animation.
+// - per examples below:
+// -- 'animation-item--welcome' emulates the welcome animation for 'pick-a-box' component popup--welcome.
+// ---  it should be within 'lci-pick-a-box-popup__main-img--welcome'
+// -- 'animation-item--coral' emulates the coral native popup with a specific web content.
+// --- the definitions here should be pasted there.
+// 3. we apply specific breakpoint definitions per each animation
+// -  animation-name.
+// -  background-image.
+// -  background-size.
+// -- all have variable names.
+// 4. we apply generic animation properties once.
+// - duration
+// - fill mode
+// - animation-timing-function (steps)
+// - background position and repeat.
+
+.animation-item {
+  // define size of the generic container
+  // paste this code within the popup__img container...
+  @include respond-to(mobile) {
+    height: map-get($sg-pick-a-box-popup-image-size, mobile);
+    width: map-get($sg-pick-a-box-popup-image-size, mobile);
+  }
+  @include respond-to(tablet-desktop) {
+    height: map-get($sg-pick-a-box-popup-image-size, tablet);
+    width: map-get($sg-pick-a-box-popup-image-size, tablet);
+  }
+  margin: 0 auto;
+  &--coral {
+    // same conventions as above animation with different values.
+    @include respond-to(mobile) {
+      animation-name: pick-a-box-animation-coral-mobile;
+      background-image: get-image($cms-pick-a-box-coral-animation-mobile);
+      background-size: $pick-a-box-animation-coral-background-size-mobile;
+    }
+    @include respond-to(tablet) {
+      animation-name: pick-a-box-animation-coral-tablet;
+      background-image: get-image($cms-pick-a-box-coral-animation-tablet);
+      background-size: $pick-a-box-animation-coral-background-size-tablet;
+    }
+    @include respond-to(desktop) {
+      .desktop & {
+        animation-name: pick-a-box-animation-coral-desktop;
+        background-image: get-image($cms-pick-a-box-coral-animation-desktop);
+        background-size: $pick-a-box-animation-coral-background-size-desktop;
+      }
+    }
+    animation-delay: $pick-a-box-animation-delay;
+    animation-duration: $pick-a-box-animation-coral-duration;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps($pick-a-box-animation-coral-steps);
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+  &--welcome {
+    // same conventions as above animation with different values.
+    @include respond-to(mobile) {
+      animation-name: pick-a-box-animation-welcome-mobile;
+      background-image: get-image($cms-pick-a-box-welcome-animation-mobile);
+      background-size: $pick-a-box-animation-welcome-background-size-mobile;
+    }
+    @include respond-to(tablet) {
+      animation-name: pick-a-box-animation-welcome-tablet;
+      background-image: get-image($cms-pick-a-box-welcome-animation-tablet);
+      background-size: $pick-a-box-animation-welcome-background-size-tablet;
+    }
+    @include respond-to(desktop) {
+      .desktop & {
+        animation-name: pick-a-box-animation-welcome-desktop;
+        background-image: get-image($cms-pick-a-box-welcome-animation-desktop);
+        background-size: $pick-a-box-animation-welcome-background-size-desktop;
+      }
+    }
+    animation-delay: $pick-a-box-animation-delay;
+    animation-duration: $pick-a-box-animation-welcome-duration;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps($pick-a-box-animation-welcome-steps);
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}

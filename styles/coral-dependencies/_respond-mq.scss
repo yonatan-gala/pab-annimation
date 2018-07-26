@@ -1,0 +1,78 @@
+// *** RESPOND-TO
+// ## This mixin helps creating semantic media queries based on our $breakpoint variables.
+// - it is the main method of defining @media statements throughout the scope of the project.
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+  @if $media == mobile-portrait {
+    @media only screen and (max-width: $mobile) and (orientation: portrait) {
+      @content;
+    }
+  }
+  @if $media == mobile-landscape {
+    @media only screen and (max-width: $mobile) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $media == mobile-tablet {
+    @media only screen and (max-width: $tablet_minus_1) {
+      @content;
+    }
+    @media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) {
+      @content;
+    }
+  } @else if $media == mobile-tablet-portrait {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+    @media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) and (orientation: portrait) {
+      @content;
+    }
+  } @else if $media == tablet-narrow {
+    @media only screen and (max-width: $narrow-tablet) and (min-width: $mobile_plus_1) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) {
+      @content;
+    }
+  } @else if $media == tablet-portrait {
+    @media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) and (orientation: portrait) {
+      @content;
+    }
+  } @else if $media == tablet-landscape {
+    @media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $media == tablet-desktop {
+    @media only screen and (min-width: $mobile_plus_1) {
+      @content;
+    }
+  } @else if $media == nodesktop {
+    @media only screen and (max-width: $desktop) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media only screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $media == desktop-tablet {
+    @media only screen and (min-width: $desktop-tablet) {
+      @content;
+    }
+  } @else if $media == desktop-narrow {
+    @media only screen and (min-width: $desktop-narrow) {
+      @content;
+    }
+  } @else if $media == desktop-wide {
+    @media only screen and (min-width: $desktop-wide) {
+      @content;
+    }
+  } @else if $media == desktop-max {
+    @media only screen and (min-width: $desktop-max) {
+      @content;
+    }
+  }
+}

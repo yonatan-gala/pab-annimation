@@ -1,0 +1,8 @@
+// ** GET-IMAGE
+// ## This function adds url() syntax and put an image variable definition for it.
+// - In case variable is not defined, an error will be prompted.
+@function get-image($asset-image) {
+  @if $asset-image {
+  @return url($asset-image);
+  }
+}

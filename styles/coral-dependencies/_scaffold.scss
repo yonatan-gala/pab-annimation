@@ -1,0 +1,52 @@
+// ** Resets and Scaffolding
+// This partial defines the root definitions for HTML elements.
+// It is utilized for:
+// - cross browser reset normalization
+// - style guide focused scaffolding.
+//
+// ## General reset
+* {
+  box-sizing: border-box;
+  font-family: $font-family-primary;
+  -webkit-overflow-scrolling: auto;
+  // - Enable defaults for pseudo elements
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+html {
+  font-family: $font-family-primary;
+  font-size: 62.5%;
+}
+
+body {
+  // base font-size in PX. to properly calculate REM.
+  font-family: $font-family-primary;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+

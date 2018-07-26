@@ -1,7 +1,7 @@
 # gitignore
-### Example user template template
-### Example user template
 
 # IntelliJ project files
 .idea/*
 *.iml
+.DS_Store
+node_modules

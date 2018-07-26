@@ -1,11 +1,113 @@
-.mock-ui-section {
-  background-color: white;
-  min-height: 120px;
-  padding: 10px; }
-  .mock-ui-section:nth-child(odd) {
-    background-color: #f2f2f2;; }
+@keyframes pick-a-box-animation-coral-mobile {
+  100% {
+    background-position-x: -1600px; } }
+
+@keyframes pick-a-box-animation-coral-tablet {
+  100% {
+    background-position-x: -2120px; } }
+
+@keyframes pick-a-box-animation-coral-desktop {
+  100% {
+    background-position-x: -2120px; } }
+
+@keyframes pick-a-box-animation-welcome-mobile {
+  100% {
+    background-position-x: -1134px; } }
+
+@keyframes pick-a-box-animation-welcome-tablet {
+  100% {
+    background-position-x: -1785px; } }
+
+@keyframes pick-a-box-animation-welcome-desktop {
+  100% {
+    background-position-x: -1855px; } }
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  -webkit-overflow-scrolling: auto; }
+  *:before, *:after {
+    box-sizing: border-box;
+    font-family: inherit; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 62.5%; }
 
 body {
-  background-color: Red;
-  color: white;
-  font-size: 48px; }
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+:focus {
+  outline-color: transparent;
+  outline-style: none; }
+
+.animation-item {
+  margin: 0 auto; }
+  @media only screen and (max-width: 767px) {
+    .animation-item {
+      height: 16.2rem;
+      width: 16.2rem; } }
+  @media only screen and (min-width: 768px) {
+    .animation-item {
+      height: 26.5rem;
+      width: 26.5rem; } }
+  .animation-item--coral {
+    animation-delay: 0.2ms;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(8);
+    background-position: left center;
+    background-repeat: no-repeat; }
+    @media only screen and (max-width: 767px) {
+      .animation-item--coral {
+        animation-name: pick-a-box-animation-coral-mobile;
+        background-image: url("/library/PickABox/animation-pab-coral-mobile.png");
+        background-size: 1800px 185px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1279px) {
+      .animation-item--coral {
+        animation-name: pick-a-box-animation-coral-tablet;
+        background-image: url("/library/PickABox/animation-pab-coral-tablet.png");
+        background-size: 2385px 245px; } }
+    @media only screen and (min-width: 970px) {
+      .desktop .animation-item--coral {
+        animation-name: pick-a-box-animation-coral-desktop;
+        background-image: url("/library/PickABox/animation-pab-coral-desktop.png");
+        background-size: 2385px 245px; } }
+  .animation-item--welcome {
+    animation-delay: 0.2ms;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(7);
+    background-position: left center;
+    background-repeat: no-repeat; }
+    @media only screen and (max-width: 767px) {
+      .animation-item--welcome {
+        animation-name: pick-a-box-animation-welcome-mobile;
+        background-image: url("/library/PickABox/animation-pab-welcome-mobile.png");
+        background-size: 1296px 162px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1279px) {
+      .animation-item--welcome {
+        animation-name: pick-a-box-animation-welcome-tablet;
+        background-image: url("/library/PickABox/animation-pab-welcome-tablet.png");
+        background-size: 2040px 255px; } }
+    @media only screen and (min-width: 970px) {
+      .desktop .animation-item--welcome {
+        animation-name: pick-a-box-animation-welcome-desktop;
+        background-image: url("/library/PickABox/animation-pab-welcome-desktop.png");
+        background-size: 2120px 265px; } }

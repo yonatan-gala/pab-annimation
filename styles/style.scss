@@ -1,2 +1,10 @@
-@import 'mock-ui/mock-ui';
-@import 'ngs/base/scaffold';
+// 'coral' variables , functions, mixins
+@import 'coral-dependencies/config';
+@import 'coral-dependencies/get-image';
+@import 'coral-dependencies/respond-mq';
+// scoped config (will be merged to 'components', 'assets' 'global' settings and keyframes.
+@import 'config-animation';
+// coral must have scaffold
+@import 'coral-dependencies/scaffold';
+// animation definitions
+@import 'animation-item';
